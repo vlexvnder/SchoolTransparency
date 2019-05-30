@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Causes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <script src="jquery-3.3.1.min.js"></script>
+   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/pricing-page-w-toggle.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Catamaran:300,regular,700","Sarabun:regular,700"]  }});</script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<style>
+:root {
+  --main-bg-color: #e6ccff;
+--second-bg-color: #b3d9ff;
+}
+.center {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.center-x{
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -0%);
+  transform: translate(-50%, -0%);
+}
+.btn{
+ background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.box{
+    height: 500px;
+    background-color: var(--main-bg-color);
+-webkit-clip-path: polygon(0 90%, 100% 100%, 100% 0%, 0% 0%);
+clip-path: polygon(0 90%, 100% 100%, 100% 0%, 0% 0%);
+}
+.box-topcut{
+    height: 700px;
+    background-color: var(--main-bg-color);
+    -webkit-clip-path: polygon(100% 100%, 100% 0, 0 10%, 0% 100%);
+clip-path: polygon(100% 100%, 100% 0, 0 10%, 0% 100%);
+}
+.btn:active{
+    -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+}
+.btn:hover {background-color: #39ace7;}
+#def {
+    opacity: .1;
+    transition: 1s;
+    color: #002db3;
+}
+#hoverbox:hover #def{
+   opacity: 1;
+   color: #002db3;
+}
+#findit{
+    opacity: .05;
+    transition: 1s;
+}
+#hoverbox:hover #findit{
+    opacity: 1;
+
+}
+#print{
+    animation: type 1.5s steps(6);
+    overflow: hidden;
+white-space: no-wrap;
+    border-right: 4px solid black;
+    width: 6ch;
+    height: 70px;
+}
+@keyframes type{
+    0% {
+        width:0ch;
+    }
+    100% {
+        width:6ch;
+    }
+}
+.typewriter h2 {
+  /* Web-safe typewriter-like font */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  font-size: 35px;
+
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+   letter-spacing: .05em;/* Adjust as needed */
+  animation: type 6s steps(59)
+
+
+}
+.typewriter h3 {
+  /* Web-safe typewriter-like font */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  font-size: 35px;
+
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .05em; /* Adjust as needed */
+  animation: type 4s steps(59)
+
+
+}
+.typewriter h1 {
+    opacity: 1;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  font-size: 40px;
+
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .05em; /* Adjust as needed */
+  animation: pop 8s steps(30);
+
+
+}
+/* The typing effect */
+@keyframes pop{
+    0%{
+        opacity: -1;
+    }
+    70%{
+        opacity: 1;
+        width: 0ch;
+        border-right: 4px solid black;
+    }
+    100%{
+        width: 30ch;
+        opacity: 1;
+
+    }
+    end{
+        border-right: 0px;
+    }
+}
+@keyframes type {
+  0% {
+      width: 0ch;
+      border-right: 4px solid black;
+  }
+  100% {
+      width: 60ch;
+
+  }
+  end{
+        border-right: 0px;
+    }
+}
+li{
+    color: black;
+    font-size: 30px;
+    margin: 20px;
+}
+#container .box {
+  width:100vw;
+  height:100vh;
+  display:inline-block;
+  position:relative;
+}
+#container .box > div {
+  width:100px;
+  height:100px;
+  font-size:96px;
+  color:#FFF;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin:-50px 0 0 -50px;
+  line-height:.7;
+  font-weight:bold;
+}
+#container {
+  overflow-y:scroll;
+  overflow-x:hidden;
+  transform: rotate(270deg) translateX(-100%);
+  transform-origin: top left;
+  background-color:#999;
+  position:absolute;
+  width:100vh;
+  height:100vw;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+#container2 {
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  white-space:nowrap;
+  font-size:0;
+}
+
+.one {
+  background-color: var(--main-bg-color);
+
+}
+.two {
+  background-color: var(--second-bg-color);
+}
+.three {
+  background-color: var(--main-bg-color);
+}
+.four {
+  background-color: var(--second-bg-color);
+}
+.five{
+    background-color: var(--main-bg-color);
+}
+a{
+    color: black;
+}
+a:hover{
+    color:black;
+}
+</style>
+<body>
+
+   <div class="box">
+
+       <br>
+       <br>
+
+<div class="typewriter">
+           <h2 style="text-align: center">
+    There's a gap in trust between students and administrators.</h2>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="typewriter" >
+    <h1 style="text-align: center">
+    And it's only getting worse.
+    </h1>
+
+</div>
+       </div>
+
+        <div class="pricing-background"></div>
+      <div class="container">
+           <div class="pricing-box-row monthly-row">
+        <div class="pricing-box" style="width: 450px; margin-top: 20px; height: 500px;" >
+                   <h1 class="price" >Student complaints:</h1>
+                   <ul>
+                  <li>Scheduling</li>
+                <li>Grading</li>
+                <li>Fencing</li>
+                <li>Funding</li>
+                <li>Cirriculum</li>
+           </ul>
+              </div>
+
+            </a>
+
+          <div class="pricing-box" style="width: 450px; margin-top: 20px; height: 500px;" >
+                   <h1 class="price" >Laws</h1>
+                   <br>
+                   <p  style="font-size: 30px;">There are a few laws governing transparency. But they don't go far enough.</p>
+           </div>
+          <div class="pricing-box" style="width: 450px; margin-top: 20px; height: 500px;" >
+                   <h1 class="price" >A Different Perspective</h1>
+                   <br>
+                   <p  style="font-size: 30px;">Schools are scared students don't understand the complexity of the decisions they make</p>
+           </div>
+        </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+       <div class="box-topcut">
+
+
+
+       <div class="container">
+              <div class="pricing-box-row monthly-row">
+              <div class="pricing-box" style="width: 400px; margin-top: 90px;" data-aos="flip-left">
+                  <div class="price" style="text-align: center" >Worse Outcomes</div>
+                  <p style="font-size: 30px;">When students don't trust administrators, grades and graduation rates plummet</p>
+              </div>
+</div>
+
+            <br>
+
+      </div>
+</div>
+
+<div id="container">
+  <div id="container2">
+    <div class="box one" data-aos="flip-left"><div style="margin-left: -40vw; color: black" >1: Elected Reprsentatives</div></div>
+    <div class="box two" data-aos="flip-left"><div style="margin-left: -40vw; color: black" >2: Adivisory Council</div></div>
+    <div class="box three" data-aos="flip-left"><div style="margin-left: -40vw; color: black" >3: Schoolwide Surveys</div></div>
+    <div class="box four" data-aos="flip-left"><div style="margin-left: -40vw; color: black" >4: Teacher Feedback</div></div>
+    <div class="box five" data-aos="flip-left"><div style="margin-left: -40vw; color: black" ><a href="/">Thanks for listening!</a></div> </div>
+  </div>
+</div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
